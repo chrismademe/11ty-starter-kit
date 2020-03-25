@@ -1,0 +1,4 @@
+name: 11ty Starter
+
+stylesheets:
+    main: /assets/css/style.css
