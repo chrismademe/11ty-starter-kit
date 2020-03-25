@@ -11,4 +11,6 @@
 
 ```bash
 git clone https://github.com/chrismademe/11ty-starter-kit.git
+npm install
+npm run dev
 ```
