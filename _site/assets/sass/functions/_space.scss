@@ -1,0 +1,10 @@
+@function space($unit) {
+    // Handle 1px and 2px
+    @if (map-has-key($space, $unit)) {
+        @return map-get($space, $unit);
+    }
+
+    // Return a multiple of 4
+    $value: #{$unit * $multiple} / 1.6;
+    @return #{$value}rem;
+}

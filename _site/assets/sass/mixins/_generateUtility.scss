@@ -1,0 +1,41 @@
+/**
+ * Responsive Utility Map
+ *
+ * Generates utility classes using values from a map
+ */
+@mixin generateResponsiveUtilityMap($className, $selector, $map) {
+    @each $key, $value in $map {
+        .#{$className}-#{$key} {
+            #{$selector}: $value;
+        }
+    }
+
+    @each $bp, $val in $breakpoints {
+        @include bp($bp) {
+            @each $key, $value in $map {
+                .#{$bp}\:#{$className}-#{$key} {
+                    #{$selector}: $value;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Responsive Utility
+ *
+ * Generates breakpoints for a utility class
+ */
+@mixin generateResponsiveUtility($className, $selector, $value) {
+    .#{$className} {
+        #{$selector}: unquote($value);
+    }
+
+    @each $bp, $val in $breakpoints {
+        @include bp($bp) {
+            .#{$bp}\:#{$className} {
+                #{$selector}: unquote($value);
+            }
+        }
+    }
+}

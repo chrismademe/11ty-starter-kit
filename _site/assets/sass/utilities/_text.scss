@@ -1,0 +1,19 @@
+@if utilityIsEnabled('text') {
+    $textAlign: (
+        'left': left,
+        'right': right,
+        'center': center,
+    );
+
+    @include generateResponsiveUtilityMap('text', 'text-align', $textAlign);
+
+    $textWeight: (
+        'light': 300,
+        'normal': 400,
+        'bold': 700,
+        'heavy': 800,
+        'black': 900,
+    );
+
+    @include generateResponsiveUtilityMap('text', 'font-weight', $textWeight);
+}

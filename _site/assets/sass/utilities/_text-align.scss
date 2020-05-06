@@ -1,0 +1,9 @@
+@if utilityIsEnabled('text-align') {
+    $textAlign: (
+        'left': left,
+        'right': right,
+        'center': center,
+    );
+
+    @include generateResponsiveUtilityMap('text', 'text-align', $textAlign);
+}

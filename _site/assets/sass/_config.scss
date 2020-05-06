@@ -1,0 +1,53 @@
+//-- Variables
+$colors: (
+    'grey-900': #1f2021,
+    'grey-700': #51565a,
+    'grey-500': #969fa7,
+    'grey-300': #d0dae3,
+    'grey-100': #e7edf2,
+    'positive-900': #26ad6a,
+    'positive-700': #4bb982,
+    'positive-500': #76cba0,
+    'positive-300': #9fd9bc,
+    'positive-100': #d6f2e4,
+    'negative-900': #e0503e,
+    'negative-700': #e27062,
+    'negative-500': #e38e83,
+    'negative-300': #edbeb8,
+    'negative-100': #f7e6e4,
+    'white': white,
+    'black': black,
+);
+
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-size: 1rem;
+$font-weight: 400;
+
+$heading-font: $font-family;
+$heading-weight: 700;
+
+/**
+ * Space Values
+ *
+ * Use this to define space function values
+ * outside of the usual multiples of 8 or to
+ * override a value.
+ */
+$multiple: 4;
+$space: (
+    'pixel': 1px,
+);
+
+$breakpoints: (
+    'sm': 640px,
+    'md': 768px,
+    'lg': 1024px,
+    'xl': 1280px,
+);
+
+$utilities: (
+    'color': true,
+    'flex': true,
+    'text': true,
+);

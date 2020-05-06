@@ -1,0 +1,5 @@
+@if utilityIsEnabled('color') {
+    @include generateResponsiveUtilityMap('bg', 'background-color', $colors);
+    @include generateResponsiveUtilityMap('c', 'color', $colors);
+    @include generateResponsiveUtility('fill-current', 'fill', currentColor);
+}

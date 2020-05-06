@@ -1,0 +1,3 @@
+@function utilityIsEnabled($key) {
+    @return map-has-key($utilities, $key) and map-get($utilities, $key) == true;
+}

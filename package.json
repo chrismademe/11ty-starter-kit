@@ -1,30 +1,26 @@
 {
-	"name": "11ty-starter",
-	"version": "1.0.0",
-	"description": "A starter kit for 11ty that takes care of the faff for you.",
-	"main": "index.js",
-	"scripts": {
-		"build": "npm-run-all compileSass buildSite",
-		"buildSite": "eleventy",
-		"dev": "npm-run-all --parallel serve compileSass watch",
-		"serve": "eleventy --serve",
-		"watch": "gulp watch",
-		"compileSass": "gulp compileSass"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"@11ty/eleventy": "^0.10.0",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^7.0.1",
-		"gulp-cssnano": "^2.1.3",
-		"gulp-notify": "^3.2.0",
-		"gulp-plumber": "^1.2.1",
-		"gulp-postcss": "^8.0.0",
-		"gulp-sass": "^4.0.2",
-		"gulp-sass-glob": "^1.1.0",
-		"node-yaml": "^4.0.1",
-		"npm-run-all": "^4.1.5",
-		"postcss-logical": "^4.0.2"
-	}
+    "name": "11ty-starter",
+    "version": "1.0.0",
+    "description": "A starter kit for 11ty that takes care of the faff for you.",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm-run-all compileCSS buildSite",
+        "buildSite": "eleventy",
+        "dev": "npm-run-all --parallel serve compileCSS watch",
+        "serve": "eleventy --serve",
+        "watch": "gulp watch",
+        "compileCSS": "gulp compileCSS"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@11ty/eleventy": "^0.10.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-cssnano": "^2.1.3",
+        "gulp-postcss": "^8.0.0",
+        "node-yaml": "^4.0.1",
+        "npm-run-all": "^4.1.5",
+        "tailwindcss": "^1.4.5"
+    }
 }
