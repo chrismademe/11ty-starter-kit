@@ -41,7 +41,7 @@ const compileCSS = function () {
 };
 
 function watch(done) {
-    gulp.watch(`${config.source}/*.css`, compileCSS);
+    gulp.watch([`${config.source}/*.css`, `./tailwind.config.js`], compileCSS);
     done();
 }
 

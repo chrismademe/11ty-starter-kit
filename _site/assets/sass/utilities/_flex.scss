@@ -1,6 +1,0 @@
-@if utilityIsEnabled('flex') {
-    @include generateResponsiveUtility('flex', 'display', flex);
-    @include generateResponsiveUtility('flex-col', 'flex-direction', column);
-    @include generateResponsiveUtility('items-center', 'align-items', center);
-    @include generateResponsiveUtility('justify-center', 'justify-content', center);
-}

@@ -1,14 +1,18 @@
 const fs = require('fs');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
-module.exports = config => {
+module.exports = (config) => {
+    // Navigation Plugin
+    config.addPlugin(eleventyNavigationPlugin);
+
     // Passthrough Files/Directories
     let passThrough = ['src/assets', 'src/robots.txt', 'src/.htaccess'];
-    passThrough.forEach(item => {
+    passThrough.forEach((item) => {
         config.addPassthroughCopy(item);
     });
 
     // Watch config for changes
-    config.addWatchTarget('config.yml');
+    config.addWatchTarget('site.yml');
 
     // Handle 404 locally
     config.setBrowserSyncConfig({
@@ -21,14 +25,14 @@ module.exports = config => {
                     res.write(content404);
                     res.end();
                 });
-            }
-        }
+            },
+        },
     });
 
     return {
         dir: {
             input: 'src',
-            layouts: '_layouts'
-        }
+            layouts: '_layouts',
+        },
     };
 };

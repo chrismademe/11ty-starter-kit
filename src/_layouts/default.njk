@@ -13,11 +13,11 @@
         {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
 
         {# Stylesheets #}
-        {% for id, href in site.stylesheets %}
+        {% for href in site.stylesheets %}
             <link rel="stylesheet" href="{{ href }}">
         {% endfor %}
 
-        {% for id, href in stylesheets %}
+        {% for href in stylesheets %}
             <link rel="stylesheet" href="{{ href }}">
         {% endfor %}
 
@@ -28,11 +28,11 @@
 
         {{ content | safe }}
 
-        {% for id, src in site.scripts %}
+        {% for src in site.scripts %}
             <script src="{{ src }}"></script>
         {% endfor %}
 
-        {% for id, src in scripts %}
+        {% for src in scripts %}
             <script src="{{ src }}"></script>
         {% endfor %}
 

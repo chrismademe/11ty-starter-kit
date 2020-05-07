@@ -2,19 +2,20 @@
     "name": "11ty-starter",
     "version": "1.0.0",
     "description": "A starter kit for 11ty that takes care of the faff for you.",
-    "main": "index.js",
+    "main": "gulpfile.js",
     "scripts": {
         "build": "npm-run-all compileCSS buildSite",
-        "buildSite": "eleventy",
+        "buildSite": "npx @11ty/eleventy",
         "dev": "npm-run-all --parallel serve compileCSS watch",
-        "serve": "eleventy --serve",
+        "serve": "npx @11ty/eleventy --serve",
         "watch": "gulp watch",
         "compileCSS": "gulp compileCSS"
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
+    "devDependencies": {
         "@11ty/eleventy": "^0.10.0",
+        "@11ty/eleventy-navigation": "^0.1.5",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.1",
         "gulp-cssnano": "^2.1.3",

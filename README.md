@@ -3,8 +3,8 @@
 ## What's included?
 
 -   YAML global data, available in your templates under the `site` key.
--   Gulp configured to watch and compile SCSS
--   `.htaccess`, `robots.txt` and `sitemap.xml` ready to go
+-   Gulp and Tailwind setup and ready to go.
+-   `.htaccess`, `robots.txt` and `sitemap.xml` ready to go for Apache servers
 -   Custom 404 page
 
 ## Get Started
