@@ -6,6 +6,11 @@
 -   Gulp and Tailwind setup and ready to go.
 -   `.htaccess`, `robots.txt` and `sitemap.xml` ready to go for Apache servers
 -   Custom 404 page
+-   Eleventy Navigation plugin
+
+## Roadmap
+
+-   Create a skeleton site to get started with
 
 ## Get Started
 
