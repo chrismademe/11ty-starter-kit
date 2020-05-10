@@ -1,27 +1,30 @@
 {
-    "name": "11ty-starter",
-    "version": "1.0.0",
-    "description": "A starter kit for 11ty that takes care of the faff for you.",
-    "main": "gulpfile.js",
-    "scripts": {
-        "build": "npm-run-all compileCSS buildSite",
-        "buildSite": "npx @11ty/eleventy",
-        "dev": "npm-run-all --parallel serve compileCSS watch",
-        "serve": "npx @11ty/eleventy --serve",
-        "watch": "gulp watch",
-        "compileCSS": "gulp compileCSS"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@11ty/eleventy": "^0.10.0",
-        "@11ty/eleventy-navigation": "^0.1.5",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-cssnano": "^2.1.3",
-        "gulp-postcss": "^8.0.0",
-        "node-yaml": "^4.0.1",
-        "npm-run-all": "^4.1.5",
-        "tailwindcss": "^1.4.5"
-    }
+	"name": "11ty-starter",
+	"version": "1.0.0",
+	"description": "A starter kit for 11ty that takes care of the faff for you.",
+	"main": "gulpfile.js",
+	"scripts": {
+		"build": "npm-run-all compileCSS buildSite",
+		"buildSite": "npx @11ty/eleventy",
+		"dev": "npm-run-all --parallel serve compileCSS watch",
+		"serve": "npx @11ty/eleventy --serve",
+		"watch": "gulp watch",
+		"compileCSS": "gulp compileCSS",
+		"test": "npm-run-all serve testSite",
+		"testSite": "npx cypress open"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.10.0",
+		"@11ty/eleventy-navigation": "^0.1.5",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-postcss": "^8.0.0",
+		"node-yaml": "^4.0.1",
+		"npm-run-all": "^4.1.5",
+		"tailwindcss": "^1.4.5",
+		"cypress": "^3.8.0"
+	}
 }
