@@ -8,9 +8,10 @@
 		"buildSite": "npx @11ty/eleventy",
 		"dev": "npm-run-all --parallel serve compileCSS watch",
 		"serve": "npx @11ty/eleventy --serve",
+		"serveStatic": "npx serve _site",
 		"watch": "gulp watch",
 		"compileCSS": "gulp compileCSS",
-		"test": "npm-run-all serve testSite",
+		"test": "npm-run-all --parallel serve testSite",
 		"testSite": "npx cypress open"
 	},
 	"author": "",
