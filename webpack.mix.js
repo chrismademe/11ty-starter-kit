@@ -1,6 +1,6 @@
 let mix = require('laravel-mix');
 let tailwind = require('tailwindcss');
-let postCssPlugins = [tailwind()];
+let postCssPlugins = [tailwind('./tailwind.config.js')];
 
 mix.postCss('src/assets/css/style.css', 'src/assets/css/dist/', postCssPlugins);
 
