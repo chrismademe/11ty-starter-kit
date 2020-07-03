@@ -1,8 +1,10 @@
-let mix = require('laravel-mix');
-let tailwind = require('tailwindcss');
-let postCssPlugins = [tailwind('./tailwind.config.js')];
+let mix = require("laravel-mix");
 
-mix.postCss('src/assets/css/style.css', 'src/assets/css/dist/', postCssPlugins);
+mix.sass("src/assets/css/style.scss", "src/assets/css/dist/", {
+    sassOptions: {
+        includePaths: ["node_modules/underscores-css/src"],
+    },
+});
 
 // Full API
 // mix.js(src, output);

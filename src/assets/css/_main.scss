@@ -1,0 +1,22 @@
+.center-content {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cg {
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+
+    svg {
+        width: var(--space-8);
+        height: var(--space-8);
+    }
+}
