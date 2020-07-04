@@ -21,6 +21,14 @@
             <link rel="stylesheet" href="{{ href }}">
         {% endfor %}
 
+        {% for src in site.scripts %}
+            <script src="{{ src }}" defer></script>
+        {% endfor %}
+
+        {% for src in scripts %}
+            <script src="{{ src }}" defer></script>
+        {% endfor %}
+
         <link rel="shortcut icon" type="image/png" href="/assets/images/icons/favicon.png">
 
         <script type="application/ld+json"></script>
@@ -29,14 +37,6 @@
     <body class="{{ bodyClass }}">
 
         {{ content | safe }}
-
-        {% for src in site.scripts %}
-            <script src="{{ src }}"></script>
-        {% endfor %}
-
-        {% for src in scripts %}
-            <script src="{{ src }}"></script>
-        {% endfor %}
 
     </body>
 </html>
