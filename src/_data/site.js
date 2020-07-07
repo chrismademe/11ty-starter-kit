@@ -10,7 +10,7 @@ module.exports = {
      * For page specific stylesheets, use the same keys in
      * frontmatter.
      */
-    stylesheets: [`/assets/css/style.css`],
+    stylesheets: [`/style.css`],
 
     /**
      * Global Javascript, added in the <head> of each page
@@ -20,18 +20,4 @@ module.exports = {
      * frontmatter.
      */
     scripts: [],
-
-    /**
-     * Optional Sass Options
-     * Any valid dart-sass option can be used here
-     *
-     * @see https://sass-lang.com/documentation/js-api
-     *
-     * By default, /assets/css/style.scss will be assumed
-     * as your entry point. You can change it below with
-     * the `file` key.
-     */
-    sassOptions: {
-        includePaths: ['node_modules/underscores-css/src'],
-    },
 };
