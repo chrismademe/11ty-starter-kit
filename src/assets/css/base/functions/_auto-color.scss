@@ -1,7 +1,0 @@
-@function auto-color($color) {
-	@if (lightness($color) >= 61) {
-		@return var(--color-black);
-	} @else {
-		@return var(--color-white);
-	}
-}

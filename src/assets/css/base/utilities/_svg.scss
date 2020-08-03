@@ -1,4 +1,0 @@
-@use '../tokens';
-@use '../mixins';
-
-@include mixins.util('fill-current', 'fill', currentColor);

@@ -1,0 +1,16 @@
+@if (config('space')) {
+	@each $key, $value in config('space') {
+		@include responsive-utility('ml-#{$key}') {
+			margin-left: $value;
+		}
+
+		@include responsive-utility('mt-#{$key}') {
+			margin-top: $value;
+		}
+	}
+}
+
+@include responsive-utility('mx-auto') {
+	margin-left: auto;
+	margin-right: auto;
+}

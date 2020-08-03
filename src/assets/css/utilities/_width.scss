@@ -1,0 +1,55 @@
+.w-full {
+	width: 100%;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.vw-half {
+	width: 50vw;
+}
+
+.vh-half {
+	height: 50vh;
+}
+
+.vw-full {
+	width: 100vw;
+}
+
+.vh-full {
+	height: 100vh;
+}
+
+.mw-full {
+	max-width: 100%;
+}
+
+.mh-full {
+	max-height: 100%;
+}
+
+.vw-full {
+	width: 100vw;
+}
+
+.vh-full {
+	height: 100vh;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.h-auto {
+	height: auto;
+}
+
+@if (config('max-width')) {
+	@include responsive-utility-from-map(
+		config('max-width'),
+		'mw',
+		'max-width'
+	);
+}

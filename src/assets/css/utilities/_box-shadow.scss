@@ -1,0 +1,7 @@
+@if (config('shadow')) {
+	@each $key, $value in config('shadow') {
+		@include responsive-utility('shadow-#{$key}') {
+			box-shadow: $value;
+		}
+	}
+}

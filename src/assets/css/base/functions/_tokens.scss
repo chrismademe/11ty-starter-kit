@@ -1,9 +1,0 @@
-@use 'tokens';
-
-@function tokens($key) {
-    @if not map-has-key(tokens.$tokens, $key) {
-        @error ('There is no #{$key} key in your _tokens file.');
-    }
-
-    @return map-get(tokens.$tokens, $key);
-}

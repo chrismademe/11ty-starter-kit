@@ -1,0 +1,75 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f7f8fa;
+	color: map-get(config('color'), 'primary');
+	font-family: unquote(map-get(config('font'), 'base'));
+	font-size: var(--size-base);
+	margin: 0;
+}
+
+p {
+	line-height: 1.45;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	cursor: pointer;
+}
+
+[disabled] {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	letter-spacing: map-get(config('tracking'), 'tight');
+	line-height: 1;
+	font-weight: 700;
+}
+
+@supports (display: grid) {
+	.browser-message {
+		display: none;
+	}
+}
+
+.email-address {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}

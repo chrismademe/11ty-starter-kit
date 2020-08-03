@@ -1,0 +1,36 @@
+/**
+ * Display
+ */
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.flex {
+	display: flex;
+}
+
+.inline-flex {
+	display: inline-flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.hidden,
+[hidden] {
+	display: none;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.justify-center {
+	justify-content: center;
+}

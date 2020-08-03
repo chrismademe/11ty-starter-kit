@@ -1,0 +1,8 @@
+@function config($key) {
+	@if map-has-key($config, $key) {
+		@return map-get($config, $key);
+	}
+
+	// No key with that name found
+	@return false;
+}

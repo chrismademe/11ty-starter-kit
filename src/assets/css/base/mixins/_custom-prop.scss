@@ -1,3 +1,0 @@
-@mixin custom-prop($propKey, $key, $value) {
-	--#{$propKey}-#{$key}: #{$value};
-}

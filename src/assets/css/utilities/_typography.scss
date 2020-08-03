@@ -1,0 +1,13 @@
+@if (config('size')) {
+	@include responsive-utility-from-map(config('size'), 'size', font-size);
+}
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
