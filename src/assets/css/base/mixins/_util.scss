@@ -1,0 +1,10 @@
+/**
+ * Utility
+ *
+ * Generates a simple utility class
+ */
+@mixin util($className, $selector, $value) {
+	.#{$className} {
+		#{$selector}: unquote($value);
+	}
+}

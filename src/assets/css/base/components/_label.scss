@@ -1,0 +1,8 @@
+.label {
+	--color: var(--color-gray-70);
+
+	color: var(--color);
+	font-size: var(--size-xs);
+	letter-spacing: var(--tracking-wide);
+	text-transform: uppercase;
+}

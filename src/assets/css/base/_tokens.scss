@@ -1,0 +1,121 @@
+@use "functions";
+
+/**
+ * Breakpoints can't be used in CSS Custom Properties at the
+ * time of writing, so it just makes sense not to generate
+ * useless properties for them.
+ */
+$breakpoints: (
+	'sm': 420px,
+	'md': 768px,
+	'lg': 960px,
+	'xl': 1360px
+) !default;
+
+$defaultTokens: (
+	'color': (
+		'gray-90': #373946,
+		'gray-70': #565869,
+		'gray-50': #77798a,
+		'gray-30': #b3b4bd,
+		'gray-10': #eeeef0,
+		'neutral-90': #002c59,
+		'neutral-50': #0779e4,
+		'neutral-10': #e1eefa,
+		'negative-90': #750001,
+		'negative-50': #dd3345,
+		'negative-10': #f6dbdd,
+		'positive-90': #005929,
+		'positive-50': #21bf73,
+		'positive-10': #dbf2e7,
+		'warning-90': #523d00,
+		'warning-50': #f5af4b,
+		'warning-10': #faebd5,
+		'primary': #191a22,
+		'black': #050608,
+		'white': #fff
+	),
+	'font': (
+		'base':
+			'-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+		'mono':
+			'"Jet Brains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;'
+	),
+	'weight': (
+		'normal': 400,
+		'bold': 700
+	),
+	'size': (
+		'xs': var(--step--1),
+		'sm': var(--step-0),
+		'base': var(--step-1),
+		'lg': var(--step-2),
+		'xl': var(--step-3),
+		'2xl': var(--step-4),
+		'3xl': var(--step-5),
+		'4xl': var(--step-6),
+		'5xl': var(--step-7)
+	),
+	'space': (
+		'px': 1px,
+		'half': functions.rem(0.5),
+		1: functions.rem(1),
+		2: functions.rem(2),
+		3: functions.rem(3),
+		4: functions.rem(4),
+		6: functions.rem(6),
+		8: functions.rem(8),
+		10: functions.rem(10),
+		12: functions.rem(12),
+		16: functions.rem(16),
+		20: functions.rem(20),
+		24: functions.rem(24),
+		28: functions.rem(28),
+		32: functions.rem(32),
+		40: functions.rem(40),
+		48: functions.rem(48),
+		56: functions.rem(56),
+		64: functions.rem(64)
+	),
+	'width': (
+		'xs': 32ch,
+		'sm': 40ch,
+		'md': 60ch,
+		'lg': 70ch,
+		'xl': 85ch
+	),
+	'leading': (
+		'none': 1,
+		'tight': 1.1,
+		'default': 1.5,
+		'loose': 1.8
+	),
+	'tracking': (
+		'tight': -#{functions.rem(0.1)},
+		'default': auto,
+		'wide': functions.rem(0.2),
+		'loose': functions.rem(0.4)
+	),
+	'radius': (
+		'default': functions.rem(1),
+		'full': 99999px
+	),
+	'shadow': (
+		'sm':
+			'0 0.1rem 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05)',
+		'default':
+			'0 0.1rem 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05)',
+		'lg':
+			'0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.6rem 1rem rgba(0, 0, 0, 0.05)',
+		'xl':
+			'0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.6rem 0.8rem rgba(0, 0, 0, 0.05), 0 0.8rem 1.2rem rgba(0, 0, 0, 0.05), 0 1rem 1.6rem rgba(0, 0, 0, 0.05)',
+		'2xl':
+			'0 0.4rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.8rem 1rem rgba(0, 0, 0, 0.05), 0 1rem 1.4rem rgba(0, 0, 0, 0.05), 0 1.2rem 2rem rgba(0, 0, 0, 0.05), 0 1.4rem 2.2rem rgba(0, 0, 0, 0.05)'
+	)
+);
+
+// Project Tokens are defined for each project
+$projectTokens: () !default;
+
+// Merge them with the defaults
+$tokens: functions.non-destructive-map-merge($defaultTokens, $projectTokens);

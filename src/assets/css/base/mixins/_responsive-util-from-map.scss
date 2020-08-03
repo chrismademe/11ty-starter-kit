@@ -1,0 +1,25 @@
+@use '../tokens';
+@use '../mixins/media-query';
+
+/**
+ * Responsive Utility Map
+ *
+ * Generates utility classes using values from a map
+ */
+@mixin responsive-util-from-map($className, $selector, $map) {
+	@each $key, $value in $map {
+		.#{$className}-#{$key} {
+			#{$selector}: $value;
+		}
+	}
+
+	@each $bp, $val in tokens.$breakpoints {
+		@include media-query.mq($bp) {
+			@each $key, $value in $map {
+				.#{$bp}\:#{$className}-#{$key} {
+					#{$selector}: $value;
+				}
+			}
+		}
+	}
+}

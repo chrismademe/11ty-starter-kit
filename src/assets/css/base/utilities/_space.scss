@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../tokens';
+@use '../mixins';
+
+@include mixins.util-from-map(
+	'px',
+	'padding-inline',
+	map-get(tokens.$tokens, 'space')
+);
+
+@include mixins.util-from-map(
+	'py',
+	'padding-block',
+	map-get(tokens.$tokens, 'space')
+);
+
+@include mixins.util-from-map(
+	'mt',
+	'margin-block-start',
+	map-get(tokens.$tokens, 'space')
+);
+
+@each $key, $value in map.get(tokens.$tokens, 'space') {
+	.flow-space-#{$key} > * {
+		--flow-space: var(--space-#{$key});
+	}
+}

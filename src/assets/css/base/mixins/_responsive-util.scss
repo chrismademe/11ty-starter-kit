@@ -1,0 +1,18 @@
+/**
+ * Responsive Utility
+ *
+ * Generates breakpoints for a utility class
+ */
+@mixin responsive-util($className, $selector, $value) {
+	.#{$className} {
+		#{$selector}: unquote($value);
+	}
+
+	@each $bp, $val in $breakpoints {
+		@include mq($bp) {
+			.#{$bp}\:#{$className} {
+				#{$selector}: unquote($value);
+			}
+		}
+	}
+}

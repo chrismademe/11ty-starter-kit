@@ -1,0 +1,7 @@
+.flow > * {
+	--flow-space: var(--space-4, 1em);
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow-space);
+}

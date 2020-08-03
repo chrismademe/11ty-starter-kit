@@ -1,0 +1,5 @@
+@mixin custom-props-from-map($propKey, $map) {
+	@each $key, $value in $map {
+		--#{$propKey}-#{$key}: #{$value};
+	}
+}

@@ -1,0 +1,22 @@
+@use '../tokens';
+@use '../mixins';
+
+@include mixins.util-from-map(
+	'font',
+	'font-family',
+	map-get(tokens.$tokens, 'font')
+);
+
+@include mixins.util-from-map(
+	'text',
+	'font-size',
+	map-get(tokens.$tokens, 'size')
+);
+
+@include mixins.util-from-map(
+	'weight',
+	'font-weight',
+	map-get(tokens.$tokens, 'weight')
+);
+
+@include mixins.util('uppercase', 'text-transform', 'uppercase');
