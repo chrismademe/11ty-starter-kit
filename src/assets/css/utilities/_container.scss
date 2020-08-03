@@ -1,5 +1,7 @@
 .container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: var(--max-width-xl, rem(300));
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width-xl, rem(300));
+    padding-left: config('space', 8);
+    padding-right: config('space', 8);
 }

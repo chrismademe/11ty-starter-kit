@@ -3,34 +3,35 @@
  */
 
 .block {
-	display: block;
+    display: block;
 }
 
 .inline-block {
-	display: inline-block;
+    display: inline-block;
 }
 
 .flex {
-	display: flex;
+    display: flex;
 }
 
 .inline-flex {
-	display: inline-flex;
+    display: inline-flex;
 }
 
 .grid {
-	display: grid;
+    display: grid;
+    gap: var(--gap);
 }
 
 .hidden,
 [hidden] {
-	display: none;
+    display: none;
 }
 
 .items-center {
-	align-items: center;
+    align-items: center;
 }
 
 .justify-center {
-	justify-content: center;
+    justify-content: center;
 }

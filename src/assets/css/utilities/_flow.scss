@@ -1,15 +1,15 @@
 .flow > * {
-	--flow-space: var(--space-4, 1em);
+    --flow-space: var(--space-4, 1em);
 }
 
 .flow > * + * {
-	margin-top: var(--flow-space);
+    margin-top: var(--flow-space);
 }
 
 @if (config('space')) {
-	@each $key, $value in config('space') {
-		@include responsive-utility('flow-space-#{$key}') {
-			--flow-space: var(--space-#{$key});
-		}
-	}
+    @each $key, $value in config('space') {
+        @include responsive-utility('.flow-space-#{$key} > *') {
+            --flow-space: var(--space-#{$key});
+        }
+    }
 }

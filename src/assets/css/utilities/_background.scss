@@ -1,17 +1,17 @@
 .bg-cover {
-	background-image: var(--image);
-	background-size: cover;
-	background-position: center;
+    background-image: var(--image);
+    background-size: cover;
+    background-position: center;
 }
 
 @if (config('color')) {
-	@each $key, $value in config('color') {
-		@include responsive-utility('bg-#{$key}') {
-			background-color: $value;
+    @each $key, $value in config('color') {
+        @include responsive-utility('.bg-#{$key}') {
+            background-color: $value;
 
-			&\:hover:hover {
-				background-color: $value;
-			}
-		}
-	}
+            &\:hover:hover {
+                background-color: $value;
+            }
+        }
+    }
 }

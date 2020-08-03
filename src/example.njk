@@ -2,9 +2,30 @@
 layout: default
 ---
 
-<article class="flow | container mw-lg">
-    <h1 class="lg:c-negative-50">Flow</h1>
-    <p>So you need to space out elements within a component. Flow does just that.</p>
-    <p>See how each paragraph is nicely spaced? The Flow utility is handling that, leaving each of the child elements to focus on their own style, instead of having to manage the space around them.</p>
-    <p>Modify the space between each item by applying a <code>flow-space-{x}</code> utility. Where <code>{x}</code> is a space value from your spacing scale.</p>
-</article>
+<div class="py-20 | flow flow-space-20 | container mw-lg">
+    <nav class="cluster gap-4">
+        <ul>
+            <li>
+                <a class="c-neutral weight-bold" href="#flow">Flow</a>
+            </li>
+            <li>
+                <a class="c-neutral weight-bold" href="#grid">Grid</a>
+            </li>
+        </ul>
+    </nav>
+    <article id="flow" class="flow">
+        <h1 class="lg:c-negative-50">Flow</h1>
+        <p>So you need to space out elements within a component. Flow does just that.</p>
+        <p>See how each paragraph is nicely spaced? The Flow utility is handling that, leaving each of the child elements to focus on their own style, instead of having to manage the space around them.</p>
+        <p>Modify the space between each item by applying a <code>flow-space-{x}</code> utility. Where <code>{x}</code> is a space value from your spacing scale.</p>
+    </article>
+    <section id="grid" class="grid gap-8 cols-8 rows-4">
+        <figure class="col-span-4 col-start-5 row-start-1 | flow flow-space-2 py-4">
+            <h2>CSS Grid</h2>
+            <p>Look at this grid magic, with no custom CSS. Pretty neat, huh?</p>
+        </figure>
+        <img class="col-span-4 row-start-1 row-span-3 | h-full | cover radius-base shadow-xl" src="https://unsplash.it/400?random=1">
+        <img class="col-span-4 row-start-2 row-span-3 | h-full | cover radius-base shadow-xl" src="https://unsplash.it/400?random=2">
+        <img class="col-start-3 col-span-2 row-start-4 row-span-2 | h-full | cover radius-base shadow-xl" src="https://unsplash.it/400?random=3">
+    </section>
+</div>

@@ -1,0 +1,3 @@
+@if (config('radius')) {
+    @include responsive-utility-from-map(config('radius'), '.radius', 'border-radius');
+}

@@ -1,7 +1,7 @@
 @function auto-color($color) {
     @if (lightness($color) > 60) {
-        @return map-get($colours, 'black');
+        @return config('color', 'black');
     } @else {
-        @return map-get($colours, 'white');
+        @return config('color', 'white');
     }
 }
