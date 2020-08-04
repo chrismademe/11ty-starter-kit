@@ -6,11 +6,11 @@
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         
-            <loc>/</loc>
-        
             <loc>/assets/css/README/</loc>
         
             <loc>/example/</loc>
+        
+            <loc>/</loc>
         
     </url>
 </urlset>
