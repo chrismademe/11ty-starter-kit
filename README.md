@@ -15,7 +15,7 @@
 ## Get Started
 
 ```bash
-git clone https://github.com/chrismademe/11ty-starter-kit.git
+npx degit chrismademe/11ty-starter-kit
 cd 11ty-starter-kit
 npm install
 npm run dev
