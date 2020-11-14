@@ -45,7 +45,20 @@ p {
 }
 
 a {
+	position: relative;
 	text-decoration: none;
+
+	&:after {
+		border-bottom: 2px solid currentColor;
+		content: '';
+		display: block;
+		margin-top: -2px;
+		transition: opacity 0.1s ease-in-out;
+	}
+
+	&:hover:after {
+		opacity: 0;
+	}
 }
 
 img {
