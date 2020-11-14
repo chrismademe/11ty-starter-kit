@@ -1,7 +1,3 @@
 @if (config('shadow')) {
-    @each $key, $value in config('shadow') {
-        @include responsive-utility('.shadow-#{$key}') {
-            box-shadow: unquote($value);
-        }
-    }
+	@include utility-from-map(config('shadow'), '.shadow', 'box-shadow');
 }

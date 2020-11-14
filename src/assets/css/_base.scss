@@ -1,7 +1,7 @@
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -17,91 +17,74 @@ figcaption,
 blockquote,
 dl,
 dd {
-    margin: 0;
+	margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f7f8fa;
-    color: token('color', 'primary', black);
-    font-family: token('font', 'base', sans-serif);
-    font-size: var(--size-base);
-    text-rendering: optimizeSpeed;
-    margin: 0;
+	background-color: var(--color-white, white);
+	color: var(--color-primary, black);
+	font-family: var(--font-base, sans-serif);
+	font-size: var(--size-base);
+	text-rendering: optimizeSpeed;
+	margin: 0;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 p {
-    line-height: config('leading', 'base');
-    margin: 0;
+	line-height: var(--leading-base, 1.5);
+	margin: 0;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+	font: inherit;
 }
 
 button {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 svg {
-    fill: currentColor;
-    height: 1em;
-    width: 1em;
+	fill: currentColor;
+	height: 1em;
+	width: 1em;
 }
 
 [disabled] {
-    cursor: not-allowed;
-    opacity: 0.6;
+	cursor: not-allowed;
+	opacity: 0.6;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 li {
-    margin: 0;
-    padding: 0;
-}
-
-code,
-pre {
-    font-family: token('font', 'mono', monospace);
-}
-
-code {
-    background-color: token('color', 'gray-90', #eee);
-    border-radius: token('radius', 'base', 4px);
-    color: token('color', 'positive', blue);
-    font-size: 0.8em;
-    padding: token('space', 1) token('space', 2);
-}
-
-pre code {
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1,
@@ -112,49 +95,49 @@ h4,
 .h2,
 .h3,
 .h4 {
-    letter-spacing: map-get(config('tracking'), 'tight');
-    line-height: 1;
-    font-weight: 700;
-    margin: 0;
+	letter-spacing: var(--tracking-tight, -0.5px);
+	line-height: 1;
+	font-weight: 700;
+	margin: 0;
 }
 
 h1,
 .h1 {
-    font-size: token('size', '3xl');
+	font-size: var(--size-3xl);
 }
 
 h2,
 .h2 {
-    font-size: token('size', '2xl');
+	font-size: var(--size-2xl);
 }
 
 h3,
 .h3 {
-    font-size: token('size', 'xl');
+	font-size: var(--size-xl);
 }
 
 h4,
 .h4 {
-    font-size: token('size', 'lg');
+	font-size: var(--size-lg);
 }
 
 @supports (display: grid) {
-    .browser-message {
-        display: none;
-    }
+	.browser-message {
+		display: none;
+	}
 }
 
 .email-address {
-    unicode-bidi: bidi-override;
-    direction: rtl;
+	unicode-bidi: bidi-override;
+	direction: rtl;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
