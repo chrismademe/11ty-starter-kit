@@ -1,0 +1,7 @@
+@mixin utility-from-map($map, $name, $property) {
+	@each $key, $value in $map {
+		#{$name}-#{$key} {
+			#{$property}: $value;
+		}
+	}
+}

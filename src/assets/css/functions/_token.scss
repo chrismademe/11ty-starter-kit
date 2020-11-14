@@ -1,0 +1,9 @@
+@function token($map, $token, $default: false) {
+    @if config($map, $token) {
+        @return config($map, $token);
+    }
+
+    @if $default and not config($map, $token) {
+        @return $default;
+    }
+}

@@ -1,16 +1,1 @@
-/* Import The Library */
-@use "lib";
-
-/* Import Components you need */
-@use 'components/alert';
-@use 'components/button';
-@use 'components/cluster';
-@use 'components/container';
-@use 'components/flow';
-
-/* Your project CSS */
-@use 'error-page';
-@use 'main';
-
-/* Include Utilities last to avoid specicifity issues */
-@use 'utilities';
+@import 'partials';

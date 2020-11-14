@@ -1,0 +1,26 @@
+@function config($key, $token: false) {
+    // No key with that name found
+    @if not map-has-key($config, $key) {
+        @return false;
+    }
+
+    // No token, return the whole map
+    @if $token == false {
+        @if map-has-key($config, $key) {
+            @return map-get($config, $key);
+        }
+    }
+
+    // Return a specific token from the map
+    $map: map-get($config, $key);
+    @if map-has-key($map, $token) {
+        // Unquote font family values becaused weirdness
+        @if $key == 'font' or $key == 'shadow' {
+            @return unquote(map-get($map, $token));
+        }
+
+        @return map-get($map, $token);
+    }
+
+    @return false;
+}

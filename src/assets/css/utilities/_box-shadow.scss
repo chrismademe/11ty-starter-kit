@@ -1,0 +1,3 @@
+@if (config('shadow')) {
+	@include utility-from-map(config('shadow'), '.shadow', 'box-shadow');
+}

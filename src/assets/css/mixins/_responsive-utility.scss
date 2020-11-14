@@ -1,0 +1,13 @@
+@mixin responsive-utility($name) {
+    #{$name} {
+        @content;
+    }
+
+    @each $bp, $size in config('breakpoints') {
+        @media (min-width: $size) {
+            #{$bp}\:#{$name} {
+                @content;
+            }
+        }
+    }
+}

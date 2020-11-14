@@ -6,25 +6,18 @@ eleventyNavigation:
     key: Home
 ---
 
-<div class="container | center-content | px-8">
-    <main class="intro | flow">
-        <img src="/assets/images/11ty.png" alt="11ty" width="120" height="120">
-        <nav class="cluster">
-            <ul>
-                <li>
-                    <a class="btn" href="https://github.com/chrismademe/underscores-css">Underscores CSS</a>
-                </li>
-                <li>
-                    <a class="btn" href="https://11ty.dev/docs">11ty Docs</a>
-                </li>
-                <li>
-                    <a class="btn" href="https://mozilla.github.io/nunjucks/">Nunjucks Docs</a>
-                </li>
-            </ul>
-        </nav>
-    </main>
-</div>
+<main class="container | align-center | px-8 py-20 | flow">
+    <img class="inline-block" src="/assets/images/11ty.png" alt="11ty" width="120" height="120">
+    <nav class="cluster cluster--center gap-6">
+        <ul>
+            <li>
+                <a class="btn" href="https://11ty.dev/docs">11ty Docs</a>
+            </li>
+            <li>
+                <a class="btn" href="https://mozilla.github.io/nunjucks/">Nunjucks Docs</a>
+            </li>
+        </ul>
+    </nav>
+</main>
 
-{# <a class="cg | c-grey-500" href="https://underscores.dev">
-    {% include "svg/cg.svg" %}
-</a> #}
+{% include "cg.njk" %}

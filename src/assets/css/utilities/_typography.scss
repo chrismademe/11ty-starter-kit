@@ -1,0 +1,29 @@
+@if (config('size')) {
+	@include responsive-utility-from-map(config('size'), '.size', font-size);
+}
+
+@if (config('weight')) {
+	@include utility-from-map(config('weight'), '.weight', font-weight);
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
