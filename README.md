@@ -3,8 +3,8 @@
 ## What's included?
 
 -   Sass compilation out of the box
--   Underscores CSS included, but easily removed
--   `.htaccess`, `robots.txt` and `sitemap.xml` ready to go for Apache servers
+-   Starter CSS
+-   `.htaccess`, `robots.txt` and `sitemap.xml` ready to go
 -   Custom 404 page
 -   Eleventy Navigation plugin
 
