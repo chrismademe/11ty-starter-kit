@@ -11,9 +11,6 @@ module.exports = (config) => {
         config.addPassthroughCopy(item);
     });
 
-    // Watch config for changes
-    config.addWatchTarget('site.yml');
-
     // Handle 404 locally
     config.setBrowserSyncConfig({
         callbacks: {
