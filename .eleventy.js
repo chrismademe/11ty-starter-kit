@@ -6,7 +6,7 @@ module.exports = (config) => {
     config.addPlugin(eleventyNavigationPlugin);
 
     // Passthrough Files/Directories
-    let passThrough = ['src/assets', 'src/robots.txt', 'src/.htaccess'];
+    let passThrough = ['dist', 'robots.txt', '.htaccess'];
     passThrough.forEach((item) => {
         config.addPassthroughCopy(item);
     });
@@ -28,7 +28,6 @@ module.exports = (config) => {
 
     return {
         dir: {
-            input: 'src',
             layouts: '_layouts',
         },
     };
