@@ -4,23 +4,22 @@
 	"description": "A starter kit for 11ty that takes care of the faff for you.",
 	"main": ".eleventy.js",
 	"scripts": {
-		"dev": "npm-run-all --parallel bundle:*",
-		"bundle:eleventy": "eleventy --serve",
-		"bundle:parcel": "parcel src/**/*.js src/**/*.scss",
-		"build": "run-s prod:*",
-		"prod:eleventy": "eleventy",
-		"prod:parcel": "parcel build src/**/*.js src/**/*.scss",
-		"test": "npm-run-all --parallel serve cypress",
-		"cypress": "npx cypress open"
+		"build": "npm-run-all generate:tokens eleventy:build",
+		"dev": "npm-run-all generate:tokens eleventy:serve",
+		"eleventy:serve": "eleventy --serve",
+		"eleventy:build": "eleventy",
+		"test": "npm-run-all --parallel dev cypress",
+		"cypress": "npx cypress open",
+		"generate:tokens": "node_modules/kubas/kubas.js"
 	},
 	"author": "Chris Galbraith",
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.10.0",
+		"@11ty/eleventy": "^0.11.0",
+		"@11ty/eleventy-img": "^0.7.8",
 		"@11ty/eleventy-navigation": "^0.1.5",
 		"cypress": "^3.8.0",
-		"npm-run-all": "^4.1.5",
-		"parcel-bundler": "^1.12.4",
-		"sass": "^1.32.5"
+		"kubas": "^0.3.0",
+		"npm-run-all": "^4.1.5"
 	}
 }

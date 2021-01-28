@@ -2,12 +2,16 @@ const fs = require('fs');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 module.exports = (config) => {
+
     // Navigation Plugin
     config.addPlugin(eleventyNavigationPlugin);
 
     // Passthrough Files/Directories
-    let passThrough = ['dist', 'robots.txt', '.htaccess'];
-    passThrough.forEach((item) => {
+    [
+        'assets',
+        'templates/robots.txt',
+        'templates/.htaccess'
+    ].forEach((item) => {
         config.addPassthroughCopy(item);
     });
 
@@ -28,6 +32,7 @@ module.exports = (config) => {
 
     return {
         dir: {
+            input: 'templates',
             layouts: '_layouts',
         },
     };

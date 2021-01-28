@@ -1,7 +1,0 @@
-@mixin responsive-utility-from-map($map, $name, $property) {
-	@each $key, $value in $map {
-		@include responsive-utility('#{$name}-#{$key}') {
-			#{$property}: $value;
-		}
-	}
-}

@@ -1,3 +1,0 @@
-@if (config('color')) {
-	@include utility-from-map(config('color'), '.c', color);
-}

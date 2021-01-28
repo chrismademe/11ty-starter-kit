@@ -1,3 +1,0 @@
-@if (config('radius')) {
-	@include utility-from-map(config('radius'), '.radius', 'border-radius');
-}

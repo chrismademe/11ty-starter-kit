@@ -45,26 +45,23 @@ p {
 }
 
 a {
+	color: var(--color-neutral, blue);
 	position: relative;
+	text-decoration: underline;
+}
+
+a:hover {
 	text-decoration: none;
-
-	&:after {
-		border-bottom: 2px solid currentColor;
-		content: '';
-		display: block;
-		margin-top: -2px;
-		transition: opacity 0.1s ease-in-out;
-	}
-
-	&:hover:after {
-		opacity: 0;
-	}
 }
 
 img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+
+picture {
+	display: block;
 }
 
 input,
@@ -153,4 +150,12 @@ h4,
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+.flow > * {
+	--flow-space: var(--space-4, 1em);
+}
+
+.flow > * + * {
+	margin-top: var(--flow-space);
 }
