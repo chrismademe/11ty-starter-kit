@@ -25,12 +25,12 @@ module.exports = {
 		"base": `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
 		"mono": `"Jet Brains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace`
 	},
-	'weight': {
+	weight: {
 		400: 400,
 		700: 700,
 		900: 900
 	},
-	'size': {
+	size: {
 		'xs': `clamp(0.6075rem, 0.5636rem + 0.2195vw, 0.72rem)`,
 		'sm': `clamp(0.7294rem, 0.6628rem + 0.3329vw, 0.9rem)`,
 		'base': `clamp(0.875rem, 0.7774rem + 0.4878vw, 1.125rem)`,
@@ -42,7 +42,7 @@ module.exports = {
 		'5xl': `clamp(2.6125rem, 1.9574rem + 3.2756vw, 4.2913rem)`,
 		'6xl': `clamp(3.135rem, 2.265rem + 4.35vw, 5.3644rem)`
 	},
-	'space': {
+	space: {
 		'px': `1px`,
 		'half': `.125rem`,
 		1: `.25rem`,
@@ -70,23 +70,23 @@ module.exports = {
 		'lg': `70ch`,
 		'xl': `85ch`
 	},
-	'leading': {
+	leading: {
 		'none': 1,
 		'tight': 1.1,
 		'base': 1.5,
 		'loose': 1.8
 	},
-	'tracking': {
+	tracking: {
 		'tight': `-.025rem`,
 		'base': `auto`,
 		'wide': `.05rem`,
 		'loose': `.1rem`
 	},
-	'radius': {
+	radius: {
 		'base': `.25rem`,
 		'full': `99999px`
 	},
-	'shadow': {
+	shadow: {
 		'sm': '0 0.1rem 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05)',
 		'default': '0 0.1rem 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05)',
 		'lg': '0 0.2rem 0.4rem rgba(0, 0, 0, 0.05), 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.6rem 1rem rgba(0, 0, 0, 0.05)',
@@ -98,7 +98,7 @@ module.exports = {
 	 * need them in your Javascript but at the time of writing,
 	 * they can't be used in CSS Media Queries
 	 */
-	'breakpoints': {
+	breakpoints: {
 		'sm': `28em`,
 		'md': `40em`,
 		'lg': `60em`
