@@ -29,14 +29,23 @@
             <script src="{{ src }}" defer></script>
         {% endfor %}
 
-        <link rel="shortcut icon" type="image/png" href="/assets/images/icons/favicon.png">
-
-        <script type="application/ld+json"></script>
+        <link rel="manifest" href="/manifest.webmanifest">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     </head>
     <body class="{{ bodyClass }}">
 
         {{ content | safe }}
+
+        {# Cookie Consent 😴 #}
+        {% if site.cookieConsent.show %}
+            <cookie-consent-banner hidden>
+                <p>{{ site.cookieConsent.text | default('We use cookies to provide the best experience.') }}</p>
+            </cookie-consent-banner>
+            <script type="module" src="https://unpkg.com/simple-cookie-consent-banner/cookie-consent-banner.js"></script>
+        {% endif %}
 
     </body>
 </html>
