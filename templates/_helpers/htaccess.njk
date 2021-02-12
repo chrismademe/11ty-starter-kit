@@ -1,24 +1,27 @@
+---
+permalink: /.htaccess
+---
 RewriteEngine On
 
-# Force www.
+{# Force www. #}
 RewriteCond %{HTTP_HOST} !^$
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# Force SSL
+{# Force SSL #}
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 404 Handling
+{# 404 Handling #}
 ErrorDocument 404 /404.html
 
-# Additional Security for htaccess
+{# Additional Security for htaccess #}
 <Files .htaccess>
     Order allow,deny
     Deny from all
 </Files>
 
-# ----------------------------------------------------------------------
+{# ----------------------------------------------------------------------
 # Expires headers (for better cache control)
 # ----------------------------------------------------------------------
 #
@@ -29,13 +32,13 @@ ErrorDocument 404 /404.html
 # These are pretty far-future expires headers
 # They assume you control versioning with cachebusting query params like:
 #   <script src="application.js?20100608">
-# Additionally, consider that outdated proxies may miscache
+    # Additionally, consider that outdated proxies may miscache
 #
 #   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
 #
 # If you don`t use filenames to version, lower the css and js to something like "access plus 1 week"
-#
+#}
 
 <IfModule mod_expires.c>
     ExpiresActive on
@@ -91,7 +94,7 @@ ErrorDocument 404 /404.html
 
 </IfModule>
 
-# GZIP Compression
+{# GZIP Compression #}
 <IfModule mod_gzip.c>
     mod_gzip_on Yes
     mod_gzip_dechunk Yes
