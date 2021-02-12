@@ -8,9 +8,7 @@ module.exports = (config) => {
 
     // Passthrough Files/Directories
     [
-        'assets',
-        'templates/robots.txt',
-        'templates/.htaccess'
+        'assets'
     ].forEach((item) => {
         config.addPassthroughCopy(item);
     });
