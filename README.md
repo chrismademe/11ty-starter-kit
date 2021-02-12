@@ -4,6 +4,7 @@
 
 -   Boilerplate HTML (responsive meta tag, favicons etc.)
 -   Starter CSS
+-   Design Tokens
 -   Responsive typescale using `clamp`
 -   SEO ready
 -   Custom 404 page
