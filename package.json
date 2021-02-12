@@ -1,7 +1,7 @@
 {
 	"name": "11ty-starter",
 	"version": "1.0.0",
-	"description": "A starter kit for 11ty that takes care of the faff for you.",
+	"description": "An SEO ready starter kit for 11ty with Design Tokens, Responsive Type Scale and Cypress Testing.",
 	"main": ".eleventy.js",
 	"scripts": {
 		"build": "npm-run-all generate:tokens eleventy:build",
