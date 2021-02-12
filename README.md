@@ -2,9 +2,10 @@
 
 ## What's included?
 
--   Sass compilation out of the box
+-   Boilerplate HTML (responsive meta tag, favicons etc.)
 -   Starter CSS
--   `.htaccess`, `robots.txt` and `sitemap.xml` ready to go
+-   Responsive typescale using `clamp`
+-   SEO ready
 -   Custom 404 page
 -   Eleventy Navigation plugin
 
