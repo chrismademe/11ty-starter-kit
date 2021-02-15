@@ -1,20 +1,24 @@
 const fs = require('fs');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const criticalCss = require("eleventy-critical-css");
 
-module.exports = (config) => {
+module.exports = (eleventyConfig) => {
 
     // Navigation Plugin
-    config.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+    // Critial CSS Plugin
+    eleventyConfig.addPlugin(criticalCss);
 
     // Passthrough Files/Directories
     [
         'assets'
     ].forEach((item) => {
-        config.addPassthroughCopy(item);
+        eleventyConfig.addPassthroughCopy(item);
     });
 
     // Handle 404 locally
-    config.setBrowserSyncConfig({
+    eleventyConfig.setBrowserSyncConfig({
         callbacks: {
             ready: (err, browserSync) => {
                 const content404 = fs.readFileSync('_site/404.html');
