@@ -15,7 +15,7 @@ module.exports = {
 	 * For page specific stylesheets, use the same keys in
 	 * frontmatter.
 	 */
-	stylesheets: [`/assets/css/tokens.css`, `/assets/css/style.css`, `/assets/css/utilities.css`],
+	stylesheets: [`/style.css`],
 
 	/**
 	 * Global Javascript, added in the <head> of each page

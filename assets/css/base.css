@@ -1,0 +1,155 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--color-white, white);
+	color: var(--color-primary, black);
+	font-family: var(--font-base, sans-serif);
+	font-size: var(--size-base);
+	text-rendering: optimizeSpeed;
+	margin: 0;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	line-height: var(--leading-base, 1.5);
+	margin: 0;
+}
+
+a {
+	color: var(--color-neutral, blue);
+	position: relative;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	/* Only render images when they're in the viewport */
+	content-visibility: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+picture {
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+svg {
+	fill: currentColor;
+	height: 1em;
+	width: 1em;
+}
+
+[disabled] {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+	letter-spacing: var(--tracking-tight, -0.5px);
+	line-height: 1;
+	font-weight: 700;
+	margin: 0;
+}
+
+h1,
+.h1 {
+	font-size: var(--size-3xl);
+}
+
+h2,
+.h2 {
+	font-size: var(--size-2xl);
+}
+
+h3,
+.h3 {
+	font-size: var(--size-xl);
+}
+
+h4,
+.h4 {
+	font-size: var(--size-lg);
+}
+
+@supports (display: grid) {
+	.browser-message {
+		display: none;
+	}
+}
+
+.email-address {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

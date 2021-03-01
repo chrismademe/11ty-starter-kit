@@ -1,0 +1,9 @@
+/** Auto Grid **/
+.auto-grid {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(var(--min-width, 10rem), 1fr)
+	);
+	gap: var(--gap, 1em);
+}

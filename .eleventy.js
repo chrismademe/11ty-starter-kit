@@ -1,14 +1,10 @@
 const fs = require('fs');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const criticalCss = require("eleventy-critical-css");
 
 module.exports = (eleventyConfig) => {
 
     // Navigation Plugin
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-    // Critial CSS Plugin
-    eleventyConfig.addPlugin(criticalCss);
 
     // Passthrough Files/Directories
     [
