@@ -55,6 +55,8 @@ a:hover {
 }
 
 img {
+	/* Only render images when they're in the viewport */
+	content-visibility: auto;
 	display: block;
 	max-width: 100%;
 	height: auto;
