@@ -3,15 +3,8 @@
  * @see https://dev.to/adamkdean/simple-scss-with-11ty-kmn
  */
 
-const fs = require('fs');
 const path = require('path');
-const postcss = require('postcss');
-const cleanCSS = require('clean-css');
-
-const plugins = [
-    require('postcss-import'),
-    require('postcss-logical')
-];
+const compilePostCSS = require('../../functions/compilePostCSS');
 
 module.exports = class {
     data() {
@@ -22,15 +15,7 @@ module.exports = class {
         };
     }
 
-    // After
     async render() {
-        let srcPath = path.join(__dirname, '/../../assets/css/style.css');
-        let src = fs.readFileSync(srcPath);
-
-        return await postcss(plugins)
-            .process(src, { from: srcPath })
-            .then((result) => {
-                return new cleanCSS({}).minify(result.css).styles;
-            });
+        return await compilePostCSS(path.join(__dirname, '/../../assets/css/style.css'));
     }
 };
