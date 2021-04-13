@@ -1,5 +1,5 @@
 module.exports = {
-    outputDir: `src`,
+    outputDir: `assets/css`,
     tokens: {
         color: {
             "gray-90": "#373946",
